@@ -43,7 +43,7 @@ const SocialIcons = () => {
         <button
           key={platform}
           onClick={() => handleClick(platform, href)}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 ${glowColor} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40`}
+          className={`flex items-center gap-1.5 px-3 py-1 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 ${glowColor} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40`}
         >
           <Icon size={16} className={color} />
           <span className="text-xs font-medium">{label}</span>
