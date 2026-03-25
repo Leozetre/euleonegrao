@@ -32,7 +32,7 @@ const LaunchBadge = ({ label }: { label: string }) => (
 const ProductCard = ({ title, subtitle, badge, icon, href, trackName, accentColor, locked }: ProductCardProps) => (
   <button
     onClick={() => !locked && handleTrackedClick(href, trackName, "produto")}
-    className={`group relative flex items-center justify-between w-full px-4 py-3 sm:px-5 sm:py-3.5 rounded-2xl border border-border/50 transition-all duration-300 ease-out overflow-hidden text-left ${locked ? 'opacity-60 cursor-not-allowed' : 'hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_8px_30px_-10px_hsl(168_100%_33%/0.15)]'}`}
+    className={`group relative flex items-center justify-between w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl border border-border/50 transition-all duration-300 ease-out overflow-hidden text-left ${locked ? 'opacity-60 cursor-not-allowed' : 'hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_8px_30px_-10px_hsl(168_100%_33%/0.15)]'}`}
     style={{ background: `linear-gradient(135deg, hsl(var(--card)), hsl(var(--secondary)))` }}
     disabled={locked}
   >
