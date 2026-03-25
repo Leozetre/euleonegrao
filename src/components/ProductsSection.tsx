@@ -43,7 +43,7 @@ const ProductCard = ({ title, subtitle, badge, icon, href, trackName, accentColo
 
     <div className="flex items-center gap-4 relative z-10 transition-transform duration-300 group-hover:translate-x-2">
       <div
-        className="flex items-center justify-center h-12 w-12 sm:h-14 sm:w-14 rounded-xl shrink-0 transition-all duration-300 group-hover:scale-110 overflow-visible p-2"
+        className="flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-xl shrink-0 transition-all duration-300 group-hover:scale-110 overflow-visible p-1.5"
         style={{ border: `1px solid ${accentColor}25`, background: `hsl(var(--secondary) / 0.5)` }}
       >
         {icon}
