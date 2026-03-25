@@ -1,6 +1,6 @@
 const sections = [
-  { id: "cases", label: "Cases" },
   { id: "produtos", label: "Produtos" },
+  { id: "cases", label: "Cases" },
   { id: "servico", label: "Serviço" },
 ];
 

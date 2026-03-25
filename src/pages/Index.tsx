@@ -41,13 +41,13 @@ const Index = () => {
           <main className="flex-1 max-w-[560px] md:max-w-none mt-6 lg:mt-0 mx-auto lg:mx-0">
             <DesktopNav />
 
+            <SectionReveal id="produtos">
+              <ProductsSection />
+            </SectionReveal>
+
             {/* Cases por nicho — unified proof section */}
             <SectionReveal id="cases">
               <NicheCases />
-            </SectionReveal>
-
-            <SectionReveal id="produtos">
-              <ProductsSection />
             </SectionReveal>
 
             <PartnerTools />
