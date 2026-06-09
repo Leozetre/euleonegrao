@@ -71,13 +71,10 @@ const HeroCTA = () => {
             "primary"
           )
         }
-        className="w-full max-w-md flex items-center justify-center gap-3 px-5 py-3.5 rounded-2xl border border-primary/30 text-primary bg-primary/5 transition-all duration-300 hover:bg-primary/10 hover:border-primary/50 active:scale-[0.98]"
+        className="text-xs text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center gap-1.5"
       >
-        <GraduationCap size={18} className="shrink-0" />
-        <div className="flex flex-col items-start">
-          <span className="font-bold text-sm sm:text-base leading-tight">Minimal Pro — Mentoria</span>
-          <span className="text-[10px] sm:text-[11px] font-medium opacity-60 leading-tight line-clamp-2">Para gestores de tráfego e players do digital</span>
-        </div>
+        <GraduationCap size={13} className="shrink-0" />
+        Sou gestor de tráfego → Minimal Pro
       </button>
     </section>
   );

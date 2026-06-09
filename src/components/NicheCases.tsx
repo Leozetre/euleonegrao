@@ -252,10 +252,10 @@ const NicheCases = () => {
     <section id="cases" className="flex flex-col gap-4 mb-8">
       <div className="flex flex-col gap-1 px-1">
         <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-          Serviços
+          Resultados
         </h2>
         <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60">
-          Cases por nicho
+          Veja o que fizemos para empresas como a sua
         </p>
       </div>
 

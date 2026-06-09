@@ -5,7 +5,6 @@ import DesktopNav from "@/components/DesktopNav";
 import NicheCases from "@/components/NicheCases";
 import ProductsSection from "@/components/ProductsSection";
 import Footer from "@/components/Footer";
-import PartnerTools from "@/components/PartnerTools";
 import ThemeToggle from "@/components/ThemeToggle";
 import HeroCTA from "@/components/HeroCTA";
 import SectionReveal from "@/components/SectionReveal";
@@ -41,16 +40,15 @@ const Index = () => {
           <main className="flex-1 max-w-[560px] md:max-w-none mt-6 lg:mt-0 mx-auto lg:mx-0">
             <DesktopNav />
 
-            <SectionReveal id="produtos">
-              <ProductsSection />
-            </SectionReveal>
-
-            {/* Cases por nicho — unified proof section */}
+            {/* Cases por nicho — prova social imediata */}
             <SectionReveal id="cases">
               <NicheCases />
             </SectionReveal>
 
-            <PartnerTools />
+            {/* Ecossistema Minimal — para gestores de tráfego */}
+            <SectionReveal id="produtos">
+              <ProductsSection />
+            </SectionReveal>
 
             <Footer />
           </main>

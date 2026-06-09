@@ -101,7 +101,10 @@ const products: ProductCardProps[] = [
 
 const ProductsSection = () => (
   <section className="flex flex-col gap-3 mb-6">
-    <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground px-1 mb-1">Produtos</h2>
+    <div className="flex flex-col gap-0.5 px-1 mb-1">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Ecossistema Minimal</h2>
+      <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60">Para gestores de tráfego</p>
+    </div>
     <div className="flex flex-col gap-3">
       {products.map((p) => <ProductCard key={p.trackName} {...p} />)}
     </div>
