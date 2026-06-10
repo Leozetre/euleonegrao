@@ -13,7 +13,7 @@ export default {
       },
     },
     fontFamily: {
-      sans: ['system-ui', '-apple-system', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+      sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
     },
     extend: {
       colors: {

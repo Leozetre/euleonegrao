@@ -16,7 +16,7 @@ const HeroCTA = () => {
 
       {/* Name & tagline */}
       <div className="flex flex-col gap-1.5">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
           Léo Negrão
         </h1>
         <p className="text-sm sm:text-base text-muted-foreground font-medium max-w-sm">
