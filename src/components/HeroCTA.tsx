@@ -26,7 +26,7 @@ const HeroCTA = () => {
 
       {/* Social proof badges */}
       <div className="flex flex-wrap justify-center gap-2">
-        {["Corretores de Imóveis", "Imobiliárias", "Clínicas", "Negócios Locais"].map((niche) => (
+        {["Corretores de Imóveis", "Clínicas", "Negócios Locais"].map((niche) => (
           <span
             key={niche}
             className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-primary/20 text-primary bg-primary/5"
@@ -36,7 +36,7 @@ const HeroCTA = () => {
         ))}
       </div>
       <p className="text-[11px] text-muted-foreground -mt-2">
-        +75 clientes atendidos
+        +85 clientes atendidos
       </p>
 
       <SocialIcons />
