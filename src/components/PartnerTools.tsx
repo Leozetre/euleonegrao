@@ -47,8 +47,8 @@ const handlePartnerClick = (partner: Partner) => {
 
 const PartnerTools = () => (
   <section className="mt-10">
-    <h2 className="text-lg font-semibold text-muted-foreground mb-4">
-      Ferramentas <span className="font-normal">(parcerias)</span>
+    <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">
+      Parceiros
     </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
