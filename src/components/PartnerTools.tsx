@@ -75,16 +75,16 @@ const PartnerTools = () => (
               {p.description}
             </span>
             {p.badge && (
-              <span className="mt-1 text-[10px] font-semibold text-primary uppercase tracking-wide">
+              <span className="mt-1 text-[10px] font-medium text-muted-foreground uppercase tracking-wide">
                 {p.badge}
               </span>
             )}
             {p.coupon && (
-              <span className="mt-0.5 inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-md bg-primary/10 border border-primary/20 text-[10px] font-bold text-primary tracking-widest">
+              <span className="mt-0.5 inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-md bg-muted border border-border text-[10px] font-mono font-bold text-foreground tracking-widest">
                 cupom: {p.coupon}
               </span>
             )}
-            <span className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-primary">
+            <span className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-primary">
               Acessar com meu link
               <ExternalLink className="h-3 w-3" />
             </span>
