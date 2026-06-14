@@ -30,7 +30,7 @@ const LaunchBadge = ({ label }: { label: string }) => (
 );
 
 const ClosedBadge = ({ label }: { label: string }) => (
-  <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-muted border border-border text-muted-foreground leading-none">
+  <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-destructive/10 border border-destructive/30 text-destructive leading-none">
     {label}
   </span>
 );
@@ -38,8 +38,8 @@ const ClosedBadge = ({ label }: { label: string }) => (
 const ProductCard = ({ title, subtitle, badge, icon, href, trackName, accentColor, locked }: ProductCardProps) => (
   <button
     onClick={() => !locked && handleTrackedClick(href, trackName, "produto")}
-    className={`group relative flex items-center justify-between w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl border border-border/50 transition-all duration-300 ease-out overflow-hidden text-left ${locked ? 'opacity-60 cursor-not-allowed' : 'hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_8px_30px_-10px_hsl(168_100%_33%/0.15)]'}`}
-    style={{ background: `linear-gradient(135deg, hsl(var(--card)), hsl(var(--secondary)))` }}
+    className={`group relative flex items-center justify-between w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl border transition-all duration-300 ease-out overflow-hidden text-left ${locked ? 'border-destructive/35 cursor-not-allowed' : 'border-border/50 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_8px_30px_-10px_hsl(168_100%_33%/0.15)]'}`}
+    style={{ background: locked ? 'linear-gradient(135deg, hsl(0 84% 60% / 0.05), hsl(0 84% 60% / 0.09))' : `linear-gradient(135deg, hsl(var(--card)), hsl(var(--secondary)))` }}
     disabled={locked}
   >
     <div
@@ -69,7 +69,7 @@ const ProductCard = ({ title, subtitle, badge, icon, href, trackName, accentColo
     </div>
 
     {locked ? (
-      <Lock size={18} className="relative z-10 text-muted-foreground shrink-0 ml-4" />
+      <Lock size={18} className="relative z-10 text-destructive shrink-0 ml-4" />
     ) : (
       <ArrowRight
         size={20}
@@ -96,7 +96,7 @@ const products: ProductCardProps[] = [
     icon: <LogoImage src={minimalAcademyLogo} alt="Minimal Academy" fallback={<Package size={24} className="text-primary" />} />,
     href: "https://minimalacademy.vercel.app/",
     trackName: "minimal_academy",
-    accentColor: "#00A98F",
+    accentColor: "#ef4444",
     locked: true,
   },
   {
