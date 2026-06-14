@@ -3,7 +3,7 @@ import { trackEvent } from "@/lib/tracking";
 import lauthLogo from "@/assets/partner-lauth.png";
 import metrifiqueiLogo from "@/assets/partner-metrifiquei.png";
 
-const LAUTH_AFF_URL = "https://go.hotmart.com/D102714623Q";
+const LAUTH_AFF_URL = "https://pay.hotmart.com/K54855906H?off=n5xwwdi5&checkoutMode=10&bid=1780683380223&ref=D102714623Q&src=hotmart#utm_source=LeoMinimal&utm_medium=Berger&utm_id=X1";
 const METRIFIQUEI_AFF_URL = "https://go.hotmart.com/C102209287V";
 
 interface Partner {
@@ -11,6 +11,8 @@ interface Partner {
   description: string;
   url: string;
   logo: string;
+  badge?: string;
+  coupon?: string;
 }
 
 const partners: Partner[] = [
@@ -19,6 +21,8 @@ const partners: Partner[] = [
     description: "Multi-login para players do digital e times.",
     url: LAUTH_AFF_URL,
     logo: lauthLogo,
+    badge: "Plano Starter — valor especial",
+    coupon: "ALPHAM",
   },
   {
     name: "Metrifiquei",
@@ -63,14 +67,24 @@ const PartnerTools = () => (
             alt={`${p.name} logo`}
             className="h-10 w-10 rounded-lg object-contain"
           />
-          <div className="flex flex-col gap-0.5">
+          <div className="flex flex-col gap-0.5 flex-1">
             <span className="text-sm font-semibold text-card-foreground">
               {p.name}
             </span>
             <span className="text-xs text-muted-foreground leading-snug">
               {p.description}
             </span>
-            <span className="mt-0.5 inline-flex items-center gap-1 text-xs font-medium text-primary">
+            {p.badge && (
+              <span className="mt-1 text-[10px] font-semibold text-primary uppercase tracking-wide">
+                {p.badge}
+              </span>
+            )}
+            {p.coupon && (
+              <span className="mt-0.5 inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-md bg-primary/10 border border-primary/20 text-[10px] font-bold text-primary tracking-widest">
+                cupom: {p.coupon}
+              </span>
+            )}
+            <span className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-primary">
               Acessar com meu link
               <ExternalLink className="h-3 w-3" />
             </span>
