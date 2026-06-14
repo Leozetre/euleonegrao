@@ -29,6 +29,12 @@ const LaunchBadge = ({ label }: { label: string }) => (
   </span>
 );
 
+const ClosedBadge = ({ label }: { label: string }) => (
+  <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-muted border border-border text-muted-foreground leading-none">
+    {label}
+  </span>
+);
+
 const ProductCard = ({ title, subtitle, badge, icon, href, trackName, accentColor, locked }: ProductCardProps) => (
   <button
     onClick={() => !locked && handleTrackedClick(href, trackName, "produto")}
@@ -51,9 +57,12 @@ const ProductCard = ({ title, subtitle, badge, icon, href, trackName, accentColo
       <div className="flex flex-col gap-0.5">
         <div className="flex items-center gap-2">
           <span className="text-lg sm:text-xl leading-tight font-bold text-link-text">{title}</span>
-          {badge && (badge.toLowerCase().includes("lançamento") ? <LaunchBadge label={badge} /> : (
-            <span className="text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 leading-none">{badge}</span>
-          ))}
+          {badge && (
+            badge.toLowerCase().includes("lançamento") ? <LaunchBadge label={badge} /> :
+            badge.toLowerCase().includes("encerrad") ? <ClosedBadge label={badge} /> : (
+              <span className="text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 leading-none">{badge}</span>
+            )
+          )}
         </div>
         <span className="text-xs sm:text-sm text-muted-foreground font-medium">{subtitle}</span>
       </div>
@@ -83,10 +92,12 @@ const products: ProductCardProps[] = [
   {
     title: "Minimal Academy",
     subtitle: "Comunidade de Gestão de Tráfego Pago, grupo de networking, calls semanais e muito mais",
+    badge: "Vagas encerradas",
     icon: <LogoImage src={minimalAcademyLogo} alt="Minimal Academy" fallback={<Package size={24} className="text-primary" />} />,
     href: "https://minimalacademy.vercel.app/",
     trackName: "minimal_academy",
     accentColor: "#00A98F",
+    locked: true,
   },
   {
     title: "Minimal CORE.os",
