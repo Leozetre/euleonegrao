@@ -92,12 +92,10 @@ const products: ProductCardProps[] = [
   {
     title: "Minimal Academy",
     subtitle: "Comunidade de Gestão de Tráfego Pago, grupo de networking, calls semanais e muito mais",
-    badge: "Vagas encerradas",
     icon: <LogoImage src={minimalAcademyLogo} alt="Minimal Academy" fallback={<Package size={24} className="text-primary" />} />,
     href: "https://minimalacademy.vercel.app/",
     trackName: "minimal_academy",
-    accentColor: "#ef4444",
-    locked: true,
+    accentColor: "#00A98F",
   },
   {
     title: "Minimal CORE.os",
