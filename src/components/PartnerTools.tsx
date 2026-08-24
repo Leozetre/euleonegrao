@@ -4,7 +4,7 @@ import lauthLogo from "@/assets/partner-lauth.png";
 import metrifiqueiLogo from "@/assets/partner-metrifiquei.png";
 
 const LAUTH_AFF_URL = "https://pay.hotmart.com/K54855906H?off=n5xwwdi5&checkoutMode=10&bid=1780683380223&ref=D102714623Q&src=hotmart#utm_source=LeoMinimal&utm_medium=Berger&utm_id=X1";
-const METRIFIQUEI_AFF_URL = "https://go.hotmart.com/C102209287V";
+const METRIFIQUEI_AFF_URL = "https://v2.metrifiquei.com.br/?ref=Z4JTJKR9";
 
 interface Partner {
   name: string;
@@ -26,9 +26,11 @@ const partners: Partner[] = [
   },
   {
     name: "Metrifiquei",
-    description: "Relatórios e dashboards para acompanhar performance.",
+    description: "Relatórios automáticos de tráfego pago.",
     url: METRIFIQUEI_AFF_URL,
     logo: metrifiqueiLogo,
+    badge: "10% OFF",
+    coupon: "LEO10OFF",
   },
 ];
 
